@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <title>Интернет магазин "Мишка"/Каталог</title>
+  </head>
+  <body>
+    <header class="page-header">
+      <a href="index.html" aria-label="Перейти на главную страницу">
+        <img
+          class="page-header__logo"
+          src="#"
+          width="86"
+          height="35"
+          alt="Интернет магазин Мишка"
+        />
+      </a>
+      <nav class="main-nav">
+        <button type="button" class="main-nav__toggle">Открыть меню</button>
+        <ul class="main-nav__list site-list">
+          <li class="site-list__item">
+            <a href="">Каталог товаров</a>
+          </li>
+          <li class="site-list__item">
+            <a href="form.html" aria-label="Перейти на форму заказа"
+              >Вязание на заказ</a
+            >
+          </li>
+          <li class="site-list__item">
+            <a href="#">Поиск по сайту</a>
+          </li>
+          <li class="site-list__item">
+            <a href="#">Корзина: пока пуста</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main class="page-main">
+      <div class="page-main__intro">
+        <h1>Каталог товаров</h1>
+      </div>
+      <section class="catalog">
+        <h2 class="visually-hidden">Каталог товаров</h2>
+        <ul class="catalog-list">
+          <li class="catalog-item">
+            <a href="">
+              <div class="catalog-item__image">
+                <img src="#" alt="Вязаный зайчик в голубо-бежевой расцветке" />
+              </div>
+              <h3 class="catalog-item__name">Зайчик-попрыгайчик</h3>
+            </a>
+            <p class="catalog-item__option">Рост 30 см, вес 200 г</p>
+            <p class="catalog-item__price">
+              1 200 руб.
+              <button type="button">Купить</button>
+            </p>
+          </li>
+          <li class="catalog-item">
+            <a href="">
+              <div class="catalog-item__image">
+                <img
+                  src="#"
+                  alt="Вязаная корзинка в персоково-белой расветке с вложенными пототенцами в рулонах"
+                />
+              </div>
+              <h3 class="catalog-item__name">Корзинка для белья</h3>
+            </a>
+            <p class="catalog-item__option">Диаметр 15 см, высота 10 см</p>
+            <p class="catalog-item__price">
+              690 руб.
+              <button type="button">Купить</button>
+            </p>
+          </li>
+          <li class="catalog-item">
+            <a>
+              <div class="catalog-item__image">
+                <img
+                  src="#"
+                  alt="Вязаная корзинка в салатово-белой с мягкими игрушками"
+                />
+              </div>
+              <h3 class="catalog-item__name">Большая корзинка для игрушек</h3>
+            </a>
+            <p class="catalog-item__option">Диаметр 30 см, высота 30 см</p>
+            <p class="catalog-item__price">
+              1 500 руб.
+              <button type="button">Купить</button>
+            </p>
+          </li>
+        </ul>
+      </section>
+    </main>
+    <footer class="page-footer">
+      <div class="page-footer__social social">
+        <h2 class="visually-hidden">Давайте дружить!</h2>
+        <ul class="social-list">
+          <li class="social-item">
+            <a
+              href="https://www.instagram.com/htmlacademy"
+              aria-label="Мы в Инстаграме"
+            ></a>
+          </li>
+          <li class="social-item">
+            <a
+              href="https://www.facebook.com/htmlacademy"
+              aria-label="Мы в Фейсбуке"
+            ></a>
+          </li>
+          <li class="social-item">
+            <a href="#" aria-label="Мы в Твиттер"></a>
+          </li>
+        </ul>
+      </div>
+      <div class="page-footer__copyright copyright">
+        <a
+          href="https://htmlacademy.ru/intensive/adaptive"
+          aria-label="Перейти на HTMLAcademy"
+          >Разработано</a
+        >
+      </div>
+    </footer>
+    <form class="modal add-cart">
+      <h2>Добавить в корзину</h2>
+      <p>Выберите размер:</p>
+      <ul class="modal-add-bascket__size size-list">
+        <li class="size-item">
+          <label
+            >S
+            <input type="radio" name="size" value="size-S" />
+          </label>
+        </li>
+        <li class="size-item">
+          <label
+            >M
+            <input type="radio" name="size" value="size-M" />
+          </label>
+        </li>
+        <li class="size-item">
+          <label
+            >L
+            <input type="radio" name="size" value="size-L" />
+          </label>
+        </li>
+      </ul>
+      <button type="submit" class="modal-add-bascket__button">
+        Добавить
+      </button>
+    </form>
+  </body>
+</html>
