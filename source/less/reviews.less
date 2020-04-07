@@ -3,6 +3,7 @@
 }
 
 .reviews__autor {
+  width: 245px;
   .font(17px, 24px, 700, @black);
   font-style: normal;
 }
@@ -10,4 +11,15 @@
 .reviews__autor a {
   .font(17px, 30px);
   text-decoration: none;
+}
+
+@media (min-width: @tablet-width) {
+  .reviews {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .reviews__text {
+    flex-basis: 100%;
+  }
 }

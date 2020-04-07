@@ -1,9 +1,48 @@
 .contacts {
   line-height: 30px;
 }
+.contacs__details {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: baseline;
+}
+.contacts__label {
+  display: block;
+  flex-basis: 25%;
+}
 
 .contacts__value {
+  flex-basis: 65%;
+  display: block;
   color: @greyish-brown;
   font-style: normal;
   text-decoration: none;
+}
+iframe {
+  width: 100%;
+}
+
+@media (min-width: @tablet-width) {
+  .contacts__label {
+    flex-basis: 15%;
+  }
+  .contacts__value {
+    flex-basis: 30%;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .contacts {
+    display: flex;
+  }
+  .contacts__wrapper {
+    flex-basis: 50%;
+  }
+  .contacts__label {
+    flex-basis: 20%;
+  }
+  .contacts__value {
+    flex-basis: 80%;
+  }
 }

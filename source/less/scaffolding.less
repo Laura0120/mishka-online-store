@@ -14,15 +14,30 @@ img {
 
 h1,
 h2 {
+  margin: 0;
+
   .font(27px, 30px, 700, @black);
+}
+
+h1 {
+  text-align: center;
 }
 
 h2 {
   font-size: 25px;
 }
 
+.site-wrapper,
+.page-header__wrapper,
+.contacts__wrapper {
+  margin: 0 auto;
+  padding: 0 30px;
+}
 @media (min-width: @tablet-width) {
-  .site-wrapper {
+  .site-wrapper,
+  .promo__wrapper,
+  .page-header__wrapper,
+  .contacts__wrapper {
     margin: 0 auto;
     padding: 0 50px;
   }

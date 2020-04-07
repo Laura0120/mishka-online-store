@@ -1,3 +1,23 @@
+.advantages {
+  padding: 34px 0 62px 0;
+  box-sizing: border-box;
+}
+.advantages__list {
+  display: flex;
+  flex-flow: column wrap;
+  .list-reset ();
+}
+
 .advantages__item {
+  padding: 80px 8px 0 0;
   .font(17px, 20px, 700, @black);
+}
+
+@media (min-width: @tablet-width) {
+  .advantages {
+    height: 640px;
+  }
+  .advantages__list {
+    flex-flow: column wrap;
+  }
 }
