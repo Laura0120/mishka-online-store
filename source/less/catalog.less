@@ -1,6 +1,39 @@
-.catalog-item__name,
-.catalog-item__price {
-  .font(17px, 24px, 700, @black);
+.catalog {
+  padding: 0 30px 30px;
+}
+
+.catalog-list {
+  .list-reset();
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.catalog-item {
+  width: 260px;
+  margin-top: 30px;
+
+  border: 1px solid @white-two;
+}
+
+.catalog-item__wrapper {
+  padding: 20px 28px 0;
+}
+
+.catalog-item__description {
+  padding-bottom: 19px;
+  border-bottom: 1px solid @white-two;
+}
+
+.catalog-item__name {
+  margin: 0 0 5px;
+  .font(17px, 24px, 700, #000000);
+}
+
+.catalog-item__option {
+  margin: 0;
+  font-size: 13px;
+  line-height: 30px;
 }
 
 .catalog-item a {
@@ -8,10 +41,105 @@
 }
 
 .catalog-item__price {
-  font-size: 15px;
+  display: flex;
+  justify-content: space-between;
+
+  margin: 0;
+  padding: 21px 0 27px;
+
+  font-weight: 700;
+  color: #000000;
+
+  cursor: pointer;
+  &:hover {
+    opacity: 60%;
+    path {
+      fill: @seafoam-blue;
+    }
+  }
+
+  &:active {
+    opacity: 40%;
+  }
 }
 
-.catalog-item__option {
-  font-size: 13px;
-  line-height: 30px;
+.catalog-item__button {
+  border: none;
+  background: transparent;
+
+  cursor: pointer;
+
+  opacity: 40%;
+}
+
+.catalog-item__price:hover .catalog-item__button {
+  opacity: 1;
+}
+
+@media (min-width: @tablet-width) {
+  .catalog-item {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .catalog-item__name {
+    font-size: 20px;
+  }
+
+  .catalog-item__option {
+    font-size: 15px;
+    line-height: 30px;
+  }
+}
+
+@media (min-width: @tablet-width) and (max-width: @not-desktop-width) {
+  .catalog {
+    padding: 27px 52px 53px;
+  }
+
+  .catalog-item {
+    width: 670px;
+    margin-top: 54px;
+  }
+
+  .catalog-item__wrapper {
+    width: 50%;
+    padding-top: 25px;
+  }
+
+  .catalog-item__description {
+    height: 235px;
+  }
+
+  .catalog-item__price {
+    padding: 19px 0 23px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .catalog {
+    padding: 101px 50px 57px;
+  }
+  .catalog-list {
+    flex-direction: row;
+  }
+  .catalog-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 316px;
+    margin-right: 50px;
+  }
+  .catalog-item:nth-child(3n) {
+    margin-right: 0;
+  }
+
+  .catalog-item__wrapper {
+    height: 197px;
+    padding: 25px 32px 0;
+  }
+  .catalog-item__description {
+    height: 58%;
+    padding-bottom: 38px;
+  }
 }
