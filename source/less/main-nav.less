@@ -1,8 +1,6 @@
 .main-nav {
-  width: @mobile-width;
-  margin: 0 auto;
+  padding-top: 22px;
 }
-
 .main-nav__toggle {
   position: absolute;
   top: 25px;
@@ -64,9 +62,13 @@
   .list-reset();
 }
 
+.main-nav__item--desktop {
+  display: none;
+}
+
 .main-nav__item a {
   display: block;
-  padding: 30px 0 30px 75px;
+  padding: 27px 0 27px 75px;
 
   .font(17px, 24px, 700, #000000);
   text-decoration: none;
@@ -81,23 +83,20 @@
     opacity: 40%;
   }
 }
-.main-nav__list--user li:last-child {
-  border-bottom: 1px solid @white-two;
-}
 
-.main-nav__list--user li {
+.main-nav__list--user .main-nav__item {
   position: relative;
 }
 
 .main-nav__item--search-icon,
 .main-nav__item--cart-icon {
   position: absolute;
-  top: 35px;
+  top: 32px;
   left: 30px;
 
   cursor: pointer;
 
-  opacity: 40%;
+  opacity: 20%;
 
   &:hover {
     opacity: 1;
@@ -108,6 +107,11 @@
     opacity: 40%;
   }
 }
+
+.main-nav__item--cart-icon {
+  top: 30px;
+}
+
 .main-nav__item--search:hover .main-nav__item--search-icon,
 .main-nav__item--cart:hover .main-nav__item--cart-icon {
   opacity: 1;
@@ -125,10 +129,86 @@
   .main-nav--closed .main-nav__list {
     display: none;
   }
+
+  .main-nav__list--user li:last-child {
+    border-bottom: 1px solid @white-two;
+  }
 }
 
 @media (min-width: @tablet-width) {
+  .main-nav {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+  }
   .main-nav__toggle {
     display: none;
+  }
+
+  .main-nav__list {
+    display: flex;
+    align-items: center;
+  }
+
+  .main-nav__item a {
+    border: none;
+  }
+
+  .main-nav__list--user {
+    order: -1;
+    justify-content: flex-end;
+  }
+
+  .main-nav__list--user a {
+    border-left: 1px solid @white-two;
+  }
+
+  .main-nav__item--search span {
+    font-size: 0;
+  }
+
+  .main-nav__list--site a {
+    padding-left: 0;
+    padding-right: 37px;
+    font-size: 15px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .main-nav {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .main-nav__list--site {
+    max-width: 450px;
+    flex-wrap: wrap;
+  }
+
+  .main-nav__list--user {
+    align-items: flex-start;
+    order: 2;
+  }
+
+  .main-nav__list--site a {
+    font-size: 17px;
+  }
+
+  .main-nav__item--desktop a {
+    font-size: 15px;
+  }
+
+  .main-nav__list--site li:first-child {
+    border-right: 1px solid @white-two;
+  }
+
+  .main-nav__list--site li:nth-child(2) {
+    padding-left: 30px;
+  }
+  .main-nav__list--site li:nth-child(4) {
+    padding-left: 25px;
+  }
+  .main-nav__item--desktop {
+    display: block;
   }
 }
