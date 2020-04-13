@@ -1,12 +1,128 @@
+.product-week__wrapper {
+  display: flex;
+  flex-direction: column;
+
+  width: @mobile-width;
+  margin: 0 auto;
+  padding: 28px 30px 40px;
+}
+
+.product-week__title {
+  display: flex;
+  flex-direction: column;
+}
+
 .product-week span {
+  margin-top: 5px;
   .font(17px, 20px, 700, @seafoam-blue);
+  text-transform: uppercase;
+}
+
+.product-week__content {
+  position: relative;
+
+  max-width: 282px;
+  padding-top: 23px;
+}
+
+.product-week__description {
+  margin: 0 0 17px 0;
 }
 
 .product-week__details {
+  width: 100%;
+  margin: 0 0 28px 0;
+
   line-height: 20px;
+
+  border-collapse: collapse;
+}
+
+.product-week__feature,
+.product-week__value {
+  padding: 9px 0 10px 0;
+}
+
+.product-week__details tr {
+  border-bottom: 1px solid @white-two;
 }
 
 .product-week__price {
+  margin: 19px 0 24px 0;
+
   font-size: 17px;
   font-weight: 700;
+  text-align: center;
+}
+
+@media (min-width: @tablet-width) {
+  .product-week__wrapper {
+    width: @tablet-width;
+    padding: 45px 52px 70px;
+  }
+
+  .product-week__title {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .product-week span {
+    display: block;
+    width: 70px;
+    line-height: 17px;
+  }
+
+  .product-week__content {
+    padding-top: 50px;
+  }
+
+  .product-week__image {
+    position: absolute;
+    top: 56px;
+    right: -333px;
+  }
+
+  .product-week__description {
+    margin-bottom: 34px;
+  }
+
+  .product-week__details {
+    margin-bottom: 56px;
+
+    font-size: 15px;
+    line-height: 20px;
+  }
+
+  .product-week__price {
+    margin-bottom: 34px;
+
+    font-size: 20px;
+    line-height: 24px;
+  }
+}
+@media (min-width: @desktop-width) {
+  .product-week__wrapper {
+    width: @desktop-width;
+    padding: 98px 50px 95px 97px;
+  }
+  .product-week__title {
+    justify-content: start;
+  }
+  .product-week span {
+    order: -1;
+    margin: 14px 58px 0 0;
+  }
+
+  .product-week__content {
+    margin-left: 128px;
+    padding-top: 49px;
+  }
+
+  .product-week__description {
+    margin-bottom: 49px;
+  }
+
+  .product-week__details {
+    margin-bottom: 108px;
+  }
 }

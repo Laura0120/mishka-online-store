@@ -1,0 +1,134 @@
+.main-nav {
+  width: @mobile-width;
+  margin: 0 auto;
+}
+
+.main-nav__toggle {
+  position: absolute;
+  top: 25px;
+  right: 51px;
+  z-index: 2;
+
+  width: 32px;
+  height: 32px;
+
+  background-color: transparent;
+
+  cursor: pointer;
+  border: none;
+}
+
+.main-nav--closed .main-nav__toggle::before {
+  content: "";
+
+  position: absolute;
+  top: 8px;
+  right: 7px;
+
+  width: 20px;
+  height: 2px;
+
+  background-color: #000000;
+  box-shadow: 0 6px 0 0 #000000, 0 12px 0 0 #000000;
+}
+
+.main-nav--opened .main-nav__toggle {
+  &::before,
+  &::after {
+    content: "";
+
+    position: absolute;
+    top: 15px;
+    right: 3px;
+
+    width: 25px;
+    height: 2px;
+
+    background-color: #000000;
+  }
+
+  &::before {
+    transform: rotate(45deg);
+  }
+
+  &::after {
+    transform: rotate(-45deg);
+  }
+}
+
+.main-nav--nojs .main-nav__toggle {
+  display: none;
+}
+
+.main-nav__list {
+  .list-reset();
+}
+
+.main-nav__item a {
+  display: block;
+  padding: 30px 0 30px 75px;
+
+  .font(17px, 24px, 700, #000000);
+  text-decoration: none;
+
+  border-top: 1px solid @white-two;
+
+  &:hover {
+    opacity: 60%;
+  }
+
+  &:active {
+    opacity: 40%;
+  }
+}
+.main-nav__list--user li:last-child {
+  border-bottom: 1px solid @white-two;
+}
+
+.main-nav__list--user li {
+  position: relative;
+}
+
+.main-nav__item--search-icon,
+.main-nav__item--cart-icon {
+  position: absolute;
+  top: 35px;
+  left: 30px;
+
+  cursor: pointer;
+
+  opacity: 40%;
+
+  &:hover {
+    opacity: 1;
+    fill: @seafoam-blue;
+  }
+
+  &:active {
+    opacity: 40%;
+  }
+}
+.main-nav__item--search:hover .main-nav__item--search-icon,
+.main-nav__item--cart:hover .main-nav__item--cart-icon {
+  opacity: 1;
+  path {
+    fill: @seafoam-blue;
+  }
+}
+
+.main-nav__item--search:active .main-nav__item--search-icon,
+.main-nav__item--cart:active .main-nav__item--cart-icon {
+  opacity: 40%;
+}
+
+@media (max-width: @mobile-width-only) {
+  .main-nav--closed .main-nav__list {
+    display: none;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .main-nav__toggle {
+    display: none;
+  }
+}

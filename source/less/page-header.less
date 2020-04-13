@@ -1,3 +1,36 @@
 .page-header {
-  background-color: @white-two;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  width: @mobile-width;
+  height: 79px;
+  margin: 0 auto;
+  padding-top: 22px;
+}
+
+.page-header__logo img {
+  width: 86px;
+  height: 35px;
+}
+
+@media (min-width: @tablet-width) {
+  .page-header {
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-start;
+
+    padding: 22px 52px 0;
+
+    width: @tablet-width;
+    height: 88px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .page-header {
+    width: @desktop-width;
+    padding: 22px 50px 0;
+  }
 }
