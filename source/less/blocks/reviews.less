@@ -40,23 +40,22 @@
   flex-grow: 1;
   height: 52px;
   padding: 0;
-  border: 1px solid @white-two;
+  border: 1px solid @light-gray;
   background-color: #ffffff;
 }
 
 @media (min-width: @tablet-width) {
-  .reviews {
-    background: url(../img/review@1x.jpg) no-repeat;
-  }
   .rewiews__wrapper {
-    width: @tablet-width;
-
     position: relative;
 
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+
+    width: @tablet-width;
+
     padding: 77px 52px 67px;
+    background: url(../img/review@1x.jpg) no-repeat;
   }
 
   .reviews__item {
@@ -96,7 +95,7 @@
 @media (min-width: @desktop-width) {
   .rewiews__wrapper {
     width: @desktop-width;
-    padding: 72px 50px 182px 200px;
+    padding: 72px 50px 160px 222px;
   }
 
   .reviews__item {
@@ -108,11 +107,11 @@
   }
 
   .reviews__button {
-    left: 900px;
+    left: 926px;
   }
 
   .reviews__toggel {
-    bottom: 150px;
-    left: 900px;
+    bottom: 155px;
+    left: 926px;
   }
 }
