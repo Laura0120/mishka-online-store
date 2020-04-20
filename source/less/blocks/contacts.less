@@ -1,13 +1,13 @@
 .contacts {
   position: relative;
-
-  line-height: 30px;
 }
 
 .contacs__wrapper {
   width: @mobile-width;
   margin: 0 auto;
-  padding: 37px 30px 39px;
+  padding: 38px 27px 38px;
+
+  line-height: 30px;
 }
 
 .contacts h2 {
@@ -19,7 +19,7 @@
   flex-direction: column;
   align-items: baseline;
 
-  padding-top: 27px;
+  padding-top: 25px;
 }
 
 .contacs__details__item {
@@ -31,7 +31,8 @@
 }
 
 .contacts__label {
-  margin: 0 28px 0 0;
+  padding-left: 2px;
+  margin: 0 31px 0 0;
 }
 
 .contacts__value {
@@ -45,7 +46,7 @@
 }
 
 .contacts__button {
-  margin: 561px auto 0;
+  margin: 536px auto 0;
 }
 
 @media (max-width: @not-desktop-width) {
@@ -66,7 +67,7 @@
 @media (min-width: @tablet-width) {
   .contacs__wrapper {
     width: @tablet-width;
-    padding: 62px 52px 58px;
+    padding: 60px 45px 58px;
   }
 
   .contacts h2 {
@@ -77,16 +78,27 @@
   .contacs__details {
     flex-direction: row;
 
-    padding-top: 49px;
+    margin-top: 49px;
+    padding: 0;
+  }
+
+  .contacts__label {
+    padding-left: 6px;
+    margin: 0 23px 0 0;
   }
 
   .contacs__details__item:first-child {
-    margin-right: 35px;
+    margin-right: 48px;
   }
 
   .contacts__button {
-    width: 230px;
+    width: 237px;
     margin-top: 569px;
+    font-size: 17px;
+  }
+
+  .contacs__iframe {
+    top: 305px;
   }
 }
 
@@ -104,17 +116,22 @@
   }
 
   .contacs__content {
-    margin-right: 25px;
+    margin-right: 22px;
     padding: 72px 0 0 0;
+  }
+
+  .contacts__label {
+    padding-left: 5px;
   }
 
   .contacs__details {
     flex-direction: column;
-    padding-top: 48px;
+    margin-top: 48px;
   }
 
   .contacts__button {
-    margin: 80px 0 0;
+    margin: 80px 0 0 6px;
+    width: 229px;
   }
 
   .contacs__iframe {

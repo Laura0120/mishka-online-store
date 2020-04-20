@@ -21,7 +21,7 @@
 .product-week__content {
   position: relative;
 
-  max-width: 293px;
+  max-width: 292px;
   padding-top: 23px;
 }
 
@@ -38,9 +38,13 @@
   border-collapse: collapse;
 }
 
+.product-week__image-wrapper {
+  width: 260px;
+}
+
 .product-week__feature,
 .product-week__value {
-  padding: 9px 0 10px 0;
+  padding: 10px 28px 10px 0;
 }
 
 .product-week__details tr {
@@ -58,17 +62,20 @@
 @media (min-width: @tablet-width) {
   .product-week__wrapper {
     width: @tablet-width;
-    padding: 45px 52px 70px;
+    padding: 47px 50px 70px;
   }
 
   .product-week__title {
     flex-direction: row;
-    justify-content: space-between;
   }
 
   .product-week span {
     display: block;
+
     width: 70px;
+    margin: 12px 0 0 145px;
+
+    text-align: center;
     line-height: 17px;
   }
 
@@ -76,14 +83,16 @@
     padding-top: 50px;
   }
 
-  .product-week__image {
+  .product-week__image-wrapper {
     position: absolute;
-    top: -109px;
-    right: -318px;
+    top: 59px;
+    right: -374px;
+
+    width: 330px;
   }
 
   .product-week__description {
-    margin-bottom: 34px;
+    margin-bottom: 36px;
   }
 
   .product-week__details {
@@ -91,6 +100,11 @@
 
     font-size: 15px;
     line-height: 21px;
+  }
+
+  .product-week__feature,
+  .product-week__value {
+    padding: 9px 0 10px 0;
   }
 
   .product-week__price {
@@ -104,7 +118,7 @@
 @media (min-width: @desktop-width) {
   .product-week__wrapper {
     width: @desktop-width;
-    padding: 124px 50px 95px 97px;
+    padding: 123px 50px 95px 97px;
   }
 
   .product-week__title {
@@ -113,7 +127,7 @@
 
   .product-week span {
     order: -1;
-    margin: 14px 58px 0 0;
+    margin: 14px 52px 0 0;
   }
 
   .product-week__content {
@@ -121,11 +135,19 @@
     padding-top: 49px;
   }
 
+  .product-week__image-wrapper {
+    top: -109px;
+    left: 350px;
+    z-index: -1;
+
+    width: 525px;
+  }
+
   .product-week__description {
-    margin-bottom: 49px;
+    margin-bottom: 50px;
   }
 
   .product-week__details {
-    margin-bottom: 111px;
+    margin-bottom: 109px;
   }
 }
