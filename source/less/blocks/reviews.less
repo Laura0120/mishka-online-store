@@ -36,10 +36,27 @@
 
 .reviews__toggel-item {
   flex-grow: 1;
+
   height: 52px;
   padding: 0;
+
   border: 1px solid @light-gray;
+
   background-color: #ffffff;
+
+  cursor: pointer;
+
+  &--previous {
+    background-image: url("../img/icon-left-arrow.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  &--next {
+    background-image: url("../img/icon-right-arrow.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
 }
 
 @media (min-width: @tablet-width) {
@@ -85,7 +102,7 @@
 
   .reviews__toggel-item {
     height: 45px;
-    border: 1px solid black;
+    border: none;
   }
 
   .reviews__button {

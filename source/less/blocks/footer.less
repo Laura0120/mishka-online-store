@@ -16,16 +16,38 @@
   display: none;
 }
 
+.social-item__icon {
+  fill: #231f20;
+
+  &:hover {
+    fill: @greeny-blue-dark;
+  }
+
+  &:active {
+    opacity: 30%;
+  }
+}
+
 .page-footer__copyright {
   display: flex;
   align-items: center;
   margin-top: 44px;
   .font(19px, 18px, 700, #000000);
   text-decoration: none;
+
+  &:hover .page-footer__copyright-icon {
+    fill: @greeny-blue-dark;
+  }
+
+  &:active {
+    opacity: 30%;
+  }
 }
 
 .page-footer__copyright-icon {
   margin-left: 30px;
+
+  fill: @seafoam-blue;
 }
 
 @media (min-width: @tablet-width) {
