@@ -60,8 +60,11 @@
   &:hover {
     opacity: 60%;
 
-    path {
+    .catalog-item__button__cart-icon {
       fill: @seafoam-blue;
+    }
+    .catalog-item__button {
+      opacity: 1;
     }
   }
 
@@ -81,8 +84,8 @@
   opacity: 40%;
 }
 
-.catalog-item__price:hover .catalog-item__button {
-  opacity: 1;
+.catalog-item__button__cart-icon {
+  fill: #231f20;
 }
 
 @media (min-width: @tablet-width) {
