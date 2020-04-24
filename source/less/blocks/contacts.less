@@ -43,10 +43,18 @@
 
 .contacts__value--e-mail {
   border-bottom: 1px solid @seafoam-blue;
+
+  &:hover {
+    color: @greeny-blue-dark;
+  }
+
+  &:active {
+    opacity: 30%;
+  }
 }
 
 .contacts__button {
-  margin: 532px auto 0;
+  margin: 535px auto 0;
 }
 
 @media (max-width: @not-desktop-width) {
@@ -78,8 +86,23 @@
   }
 
   .contacts h2 {
+    position: relative;
+
     font-size: 43px;
     line-height: 50px;
+
+    &::after {
+      content: "";
+
+      position: absolute;
+      top: -15px;
+      right: 6px;
+
+      width: 47px;
+      height: 81px;
+
+      background-image: url(../img/icon-flag.svg);
+    }
   }
 
   .contacs__details {
@@ -99,7 +122,7 @@
   }
 
   .contacts__button {
-    width: 237px;
+    width: 234px;
     margin-top: 569px;
     font-size: 17px;
   }
@@ -124,8 +147,15 @@
   }
 
   .contacts h2 {
+    position: relative;
+
     font-size: 53px;
     line-height: 57px;
+
+    &::after {
+      top: -8px;
+      left: -109px;
+    }
   }
 
   .contacs__content {
