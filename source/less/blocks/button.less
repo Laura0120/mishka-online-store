@@ -1,7 +1,7 @@
 .button {
   display: block;
 
-  max-width: 292px;
+  max-width: 260px;
   padding: 14px 38px;
 
   .font(18px, 20px, 700);
@@ -12,4 +12,19 @@
   background: #ffffff;
 
   border: 2px solid @greyish-brown;
+
+  &:hover {
+    background-color: @greyish-brown;
+    color: #ffffff;
+  }
+
+  &:active {
+    color: rgba(255, 255, 255, 0.3);
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .button {
+    max-width: 292px;
+  }
 }

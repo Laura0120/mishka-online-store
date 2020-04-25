@@ -1,4 +1,11 @@
-.rewiews__wrapper {
+.reviews {
+  background-image: url(../img/bg-zigzag-line.svg);
+  background-repeat: no-repeat;
+  background-position: 0 100%;
+  background-size: contain;
+}
+
+.reviews__wrapper {
   width: @mobile-width;
   margin: 0 auto;
   padding: 0 30px 50px;
@@ -36,14 +43,39 @@
 
 .reviews__toggel-item {
   flex-grow: 1;
+
   height: 52px;
   padding: 0;
+
   border: 1px solid @light-gray;
+
   background-color: #ffffff;
+
+  cursor: pointer;
+
+  &--previous {
+    background-image: url("../img/icon-left-arrow.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  &--next {
+    background-image: url("../img/icon-right-arrow.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  &:hover {
+    opacity: 60%;
+  }
+
+  &:active {
+    opacity: 30%;
+  }
 }
 
 @media (min-width: @tablet-width) {
-  .rewiews__wrapper {
+  .reviews__wrapper {
     position: relative;
 
     display: flex;
@@ -85,7 +117,7 @@
 
   .reviews__toggel-item {
     height: 45px;
-    border: 1px solid black;
+    border: none;
   }
 
   .reviews__button {
@@ -101,7 +133,7 @@
     padding-left: 49px;
   }
 
-  .rewiews__wrapper {
+  .reviews__wrapper {
     width: @desktop-width;
     padding: 70px 197px 190px 172px;
   }

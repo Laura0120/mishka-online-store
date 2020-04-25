@@ -1,6 +1,7 @@
 .page-header {
   position: relative;
 }
+
 .page-header__wrapper {
   width: @mobile-width;
   margin: 0 auto;
@@ -13,11 +14,20 @@
   margin-bottom: 22px;
   width: 86px;
   height: 35px;
+
+  &:hover {
+    opacity: 60%;
+  }
+
+  &:active {
+    opacity: 30%;
+  }
 }
 
 @media (min-width: @tablet-width) {
   .page-header__wrapper {
-    padding: 0 52px;
+    position: relative;
+    padding: 0 49px;
 
     width: @tablet-width;
     height: 88px;
@@ -26,6 +36,10 @@
   .page-header__logo {
     position: absolute;
     top: 22px;
+    left: 48px;
+
+    width: 112px;
+    height: 48px;
   }
 }
 
@@ -36,6 +50,10 @@
   }
 
   .page-header__logo {
-    left: 525px;
+    left: 500px;
+    top: 9px;
+
+    width: 149px;
+    height: 72px;
   }
 }
