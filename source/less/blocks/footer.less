@@ -8,6 +8,8 @@
   align-items: center;
 
   width: @mobile-width;
+  min-height: 160px;
+
   margin: 0 auto;
   padding: 21px 0 25px;
 }
@@ -54,10 +56,10 @@
   .page-footer__wrapper {
     flex-direction: row;
     justify-content: space-between;
-    align-items: baseline;
 
     width: @tablet-width;
-    padding: 17px 51px 48px;
+    min-height: 143px;
+    padding: 0 51px;
   }
 
   .page-footer__logo {
@@ -75,11 +77,15 @@
   .page-footer__social {
     margin-left: 80px;
   }
+
+  .page-footer__copyright {
+    margin: 0;
+  }
 }
 
 @media (min-width: @desktop-width) {
   .page-footer__wrapper {
     width: @desktop-width;
-    padding: 18px 50px 42px;
+    padding: 0 50px;
   }
 }

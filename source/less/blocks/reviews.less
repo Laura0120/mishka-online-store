@@ -1,14 +1,24 @@
-.reviews {
-  background-image: url("../img/bg-zigzag-line.svg");
-  background-repeat: repeat-x;
-  background-size: 105%;
-  background-position: -7px 100%;
-}
-
 .reviews__wrapper {
+  position: relative;
+
   width: @mobile-width;
   margin: 0 auto;
   padding: 5px 30px 52px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+    width: 100%;
+    height: 7px;
+
+    background-image: url("../img/bg-zigzag-line.svg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: -8px 0;
+  }
 }
 
 .reviews__item {
@@ -75,14 +85,7 @@
 }
 
 @media (min-width: @tablet-width) {
-  .reviews {
-    background-size: 103%;
-    background-position: 16px 100%;
-  }
-
   .reviews__wrapper {
-    position: relative;
-
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -90,11 +93,26 @@
     width: @tablet-width;
     padding: 77px 44px 133px;
 
-    background: url("../img/review@1x.jpg") no-repeat;
-    background-size: 350px auto;
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: -1;
 
-    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
-      background-image: url("../img/review@2x.jpg");
+      width: 100%;
+      height: 100%;
+      background: url("../img/review@1x.jpg") no-repeat;
+      background-size: 350px auto;
+
+      @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+        background-image: url("../img/review@2x.jpg");
+      }
+    }
+
+    &::before {
+      height: 17px;
+      background-position: -19px 0;
     }
   }
 
@@ -134,17 +152,22 @@
 }
 
 @media (min-width: @desktop-width) {
-  .reviews {
-    background-size: 94%;
-  }
-
-  .page-main__reviews {
-    padding-left: 49px;
-  }
-
   .reviews__wrapper {
     width: @desktop-width;
-    padding: 70px 197px 190px 172px;
+    padding: 70px 153px 190px 172px;
+
+    &::after {
+      left: 49px;
+    }
+
+    &::before {
+      left: 49px;
+
+      width: 1052px;
+      height: 21px;
+
+      background-position: -28px 0;
+    }
   }
 
   .reviews__item {
