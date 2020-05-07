@@ -53,20 +53,29 @@
   }
 }
 
-.production-video__link {
-  position: relative;
+.production-video__img-wrapper {
   width: 260px;
+}
 
-  &:hover .production-video__play {
-    top: 30px;
+.production-video__img-wrapper img {
+  display: block;
+}
+
+.production-video__play {
+  position: absolute;
+  top: 129px;
+  left: 79px;
+
+  &:hover {
+    top: 123px;
     left: 69px;
 
     width: 121px;
     height: 92px;
   }
 
-  &:active .production-video__play {
-    top: 44px;
+  &:active {
+    top: 136px;
     left: 89px;
 
     width: 81px;
@@ -76,17 +85,7 @@
   }
 }
 
-.production-video__link img {
-  display: block;
-}
-
-.production-video__play {
-  position: absolute;
-  top: 37px;
-  left: 79px;
-}
-
-.production-video__discription {
+.production-video__description {
   margin: 0 0 25px;
 
   font-size: 13px;
@@ -101,7 +100,7 @@
 }
 
 @media (max-width: @mobile-width-only) {
-  .production-video__link {
+  .production-video__img-wrapper {
     position: absolute;
     top: 94px;
     left: 0;
@@ -122,24 +121,24 @@
     padding: 39px 40px 44px;
   }
 
-  .production-video__link {
+  .production-video__img-wrapper {
     order: -1;
     width: 668px;
-
-    &:hover .production-video__play {
-      top: 183px;
-      left: 272px;
-    }
-
-    &:active .production-video__play {
-      top: 197px;
-      left: 292px;
-    }
   }
 
   .production-video__play {
     top: 190px;
     left: 282px;
+
+    &:hover {
+      top: 182px;
+      left: 272px;
+    }
+
+    &:active {
+      top: 198px;
+      left: 292px;
+    }
   }
 
   .production-video__title {
@@ -154,8 +153,8 @@
     }
   }
 
-  .production-video__discription {
-    margin-bottom: 36px;
+  .production-video__description {
+    margin-bottom: 35px;
 
     font-size: 15px;
   }
@@ -172,18 +171,18 @@
     margin-bottom: 104px;
   }
 
-  .production-video__link {
+  .production-video__img-wrapper {
     width: 682px;
-
-    &:hover .production-video__play {
-      top: 181px;
-      left: 280px;
-    }
   }
 
   .production-video__play {
     top: 188px;
     left: 290px;
+
+    &:hover {
+      top: 181px;
+      left: 280px;
+    }
   }
 
   .production-video__content {
@@ -201,7 +200,7 @@
     }
   }
 
-  .production-video__discription {
+  .production-video__description {
     margin-bottom: 47px;
   }
 }

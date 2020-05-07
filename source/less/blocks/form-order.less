@@ -2,7 +2,7 @@
   padding-bottom: 56px;
 }
 
-.form-order__item__wrapper {
+.form-order__wrapper {
   width: @mobile-width;
   padding: 23px 30px 0;
   margin: 0 auto;
@@ -30,10 +30,10 @@
   &--info {
     padding-top: 12px;
   }
-}
 
-.form-order__item&:last-of-type .form-order__item__wrapper {
-  padding-top: 0;
+  &--button {
+    padding-top: 0;
+  }
 }
 
 .form-order__list {
@@ -85,7 +85,7 @@
 }
 
 .form-order__input {
-  margin: 5px 0 19px;
+  margin: 2px 0 19px;
   padding: 6px 0 13px 0;
 
   border: none;
@@ -179,9 +179,9 @@
   }
 }
 
-.form-order__item {
-  &--phone__icon,
-  &--email__icon {
+.form-order__icon {
+  &-phone,
+  &-email {
     position: absolute;
     top: 47px;
     right: 8px;
@@ -189,12 +189,12 @@
     opacity: 20%;
   }
 
-  &--phone__icon {
+  &-phone {
     top: 47px;
     right: 38px;
   }
 
-  &--email__icon {
+  &-email {
     top: 34px;
     right: 35px;
   }
@@ -225,17 +225,17 @@
     background-color: @seafoam-blue;
   }
 
-  .form-order__item--email .form-order__title::after {
+  .form-order__title--email::after {
     width: 180px;
   }
 }
 
 @media (min-width: @tablet-width) {
   .form-order {
-    padding-bottom: 22px;
+    padding-bottom: 21px;
   }
 
-  .form-order__item__wrapper {
+  .form-order__wrapper {
     width: @tablet-width;
     padding: 54px 50px 26px;
     display: flex;
@@ -262,6 +262,13 @@
       padding-top: 49px;
       padding-bottom: 55px;
     }
+
+    &--button {
+      display: flex;
+      justify-content: space-between;
+
+      padding-top: 0;
+    }
   }
 
   .form-order__item {
@@ -271,29 +278,26 @@
       background-color: @smoky-white;
     }
 
-    &--name__wrapper {
-      width: 100%;
-    }
-
-    &:last-of-type .form-order__item__wrapper {
-      display: flex;
-      justify-content: space-between;
-    }
-
     &--phone .form-order__input,
     &--email .form-order__input {
-      margin: 13px 0 0;
+      margin: 10px 0 0;
     }
+  }
 
-    &--phone__icon {
+  .form-order__icon {
+    &-phone {
       top: 61px;
       right: 77px;
     }
 
-    &--email__icon {
+    &-email {
       top: 15px;
-      right: 72px;
+      right: 77px;
     }
+  }
+
+  .form-order__wrapper-item {
+    width: 100%;
   }
 
   .form-order__title {
@@ -315,7 +319,7 @@
     flex-wrap: wrap;
   }
 
-  .form-order__input__wrapper {
+  .form-order__wrapper-input {
     display: flex;
     margin-bottom: 9px;
   }
@@ -354,7 +358,7 @@
     }
   }
 
-  .form-order__list__item:nth-of-type(odd) label {
+  .form-order__list-item:nth-of-type(odd) label {
     margin-right: 62px;
   }
 
@@ -399,7 +403,7 @@
 }
 
 @media (min-width: @desktop-width) {
-  .form-order__item__wrapper {
+  .form-order__wrapper {
     width: @desktop-width;
     padding: 52px 225px 26px 112px;
 
@@ -421,6 +425,12 @@
       padding-top: 48px;
       padding-bottom: 50px;
     }
+
+    &--button {
+      padding-left: 224px;
+      padding-top: 0;
+      padding-bottom: ;
+    }
   }
 
   .form-order__title {
@@ -440,21 +450,17 @@
     }
   }
 
-  .form-order__list__item label {
+  .form-order__list-item label {
     margin-right: 64px;
   }
 
-  .form-order__item {
-    &:last-of-type .form-order__item__wrapper {
-      padding-left: 224px;
-    }
-
-    &--phone__icon {
+  .form-order__icon {
+    &-phone {
       top: 57px;
       right: 232px;
     }
 
-    &--email__icon {
+    &-email {
       top: 34px;
       right: 230px;
     }

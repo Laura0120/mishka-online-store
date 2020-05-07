@@ -95,7 +95,7 @@
       <form action="/" method="post" class="page-main__form-order form-order">
         <h2 class="visually-hidden">Форма заказа изделий</h2>
         <div class="form-order__item">
-          <div class="form-order__item__wrapper">
+          <div class="form-order__wrapper">
             <h3 class="form-order__title">тип</h3>
             <ul class="form-order__list">
               <li>
@@ -123,12 +123,10 @@
           </div>
         </div>
         <div class="form-order__item form-order__item--color">
-          <div
-            class="form-order__item__wrapper form-order__item__wrapper--color"
-          >
+          <div class="form-order__wrapper form-order__wrapper--color">
             <h3 class="form-order__title form-order__title--color">цвет</h3>
             <ul class="form-order__list form-order__list--color">
-              <li class="form-order__list__item">
+              <li class="form-order__list-item">
                 <input
                   class="form-order__checkbox visually-hidden"
                   type="checkbox"
@@ -138,7 +136,7 @@
                 />
                 <label for="white">Белый</label>
               </li>
-              <li class="form-order__list__item">
+              <li class="form-order__list-item">
                 <input
                   class="form-order__checkbox visually-hidden"
                   type="checkbox"
@@ -148,7 +146,7 @@
                 />
                 <label for="grey">Серый</label>
               </li>
-              <li class="form-order__list__item">
+              <li class="form-order__list-item">
                 <input
                   class="form-order__checkbox visually-hidden"
                   type="checkbox"
@@ -157,7 +155,7 @@
                 />
                 <label for="tiffany">«Тиффани»</label>
               </li>
-              <li class="form-order__list__item">
+              <li class="form-order__list-item">
                 <input
                   class="form-order__checkbox visually-hidden"
                   type="checkbox"
@@ -166,7 +164,7 @@
                 />
                 <label for="black">Черный</label>
               </li>
-              <li class="form-order__list__item">
+              <li class="form-order__list-item">
                 <input
                   class="form-order__checkbox visually-hidden"
                   type="checkbox"
@@ -175,7 +173,7 @@
                 />
                 <label for="pink">Розовый</label>
               </li>
-              <li class="form-order__list__item">
+              <li class="form-order__list-item">
                 <input
                   class="form-order__checkbox visually-hidden"
                   type="checkbox"
@@ -188,12 +186,10 @@
           </div>
         </div>
         <div class="form-order__item form-order__item--name">
-          <div
-            class="form-order__item__wrapper form-order__item__wrapper--name"
-          >
+          <div class="form-order__wrapper form-order__wrapper--name">
             <h3 class="form-order__title form-order__title--name">фио</h3>
-            <div class="form-order__item--name__wrapper">
-              <div class="form-order__input__wrapper">
+            <div class="form-order__wrapper-item">
+              <div class="form-order__wrapper-input">
                 <label for="name" class="form-order__label">Имя:</label>
                 <input
                   class="form-order__input"
@@ -204,7 +200,7 @@
                   required
                 />
               </div>
-              <div class="form-order__input__wrapper">
+              <div class="form-order__wrapper-input">
                 <label for="surname" class="form-order__label">Фамилия:</label>
                 <input
                   class="form-order__input"
@@ -214,7 +210,7 @@
                   placeholder="Укажите фамилию*"
                 />
               </div>
-              <div class="form-order__input__wrapper">
+              <div class="form-order__wrapper-input">
                 <label for="patronymic" class="form-order__label"
                   >Отчество:</label
                 >
@@ -230,9 +226,7 @@
           </div>
         </div>
         <div class="form-order__item form-order__item--phone">
-          <div
-            class="form-order__item__wrapper form-order__item__wrapper--phone"
-          >
+          <div class="form-order__wrapper form-order__wrapper--phone">
             <h3 class="form-order__title form-order__title--phone">тел</h3>
             <label for="tel" class="visually-hidden">телефон</label>
             <input
@@ -244,15 +238,13 @@
               pattern="\+7\s[0-9]{3}\s[0-9]{3}\s[0-9]{2}\s[0-9]{2}"
               required
             />
-            <svg class="form-order__item--phone__icon" width="25" height="24">
+            <svg class="form-order__icon-phone" width="25" height="24">
               <use xlink:href="#icon-phone"></use>
             </svg>
           </div>
         </div>
         <div class="form-order__item form-order__item--email">
-          <div
-            class="form-order__item__wrapper form-order__item__wrapper--email"
-          >
+          <div class="form-order__wrapper form-order__wrapper--email">
             <h3 class="form-order__title form-order__title--email">e-mail</h3>
             <label for="email" class="visually-hidden"
               >адрес электоронной почты</label
@@ -265,30 +257,28 @@
               placeholder="Ваш Email*"
               required
             />
-            <svg class="form-order__item--email__icon" width="32" height="26">
+            <svg class="form-order__icon-email" width="32" height="26">
               <use xlink:href="#icon-mail"></use>
             </svg>
           </div>
         </div>
         <div class="form-order__item form-order__item--info">
-          <div
-            class="form-order__item__wrapper form-order__item__wrapper--info"
-          >
+          <div class="form-order__wrapper form-order__wrapper--info">
             <h3 class="form-order__title form-order__title--info">доп</h3>
-            <label for="additional-information" class="visually-hidden">
+            <label for="additional-info" class="visually-hidden">
               Дополнительная информация
             </label>
             <textarea
               class="form-order__textarea"
               rows="6"
-              name="additional-information"
-              id="additional-information"
+              name="additional-info"
+              id="additional-info"
               placeholder="Опишите все ваши пожелания к заказу"
             ></textarea>
           </div>
         </div>
         <div class="form-order__item">
-          <div class="form-order__item__wrapper">
+          <div class="form-order__wrapper form-order__wrapper--button">
             <p class="form-order__footnote">*Поля обязательны для заполнения</p>
             <button type="submit" class="form-order__button button">
               отправить заказ

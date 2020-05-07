@@ -89,8 +89,8 @@
       <section class="page-main__catalog catalog">
         <div class="catalog__wrapper">
           <h2 class="visually-hidden">Каталог товаров</h2>
-          <ul class="catalog-list">
-            <li class="catalog-item">
+          <ul class="catalog__list">
+            <li class="catalog__item catalog-item">
               <a href="#" class="catalog-item__image">
                 <picture>
                   <source
@@ -153,18 +153,14 @@
                     aria-label="Купить"
                     class="catalog-item__button button--buy"
                   >
-                    <svg
-                      class="catalog-item__button__cart-icon"
-                      width="20"
-                      height="19"
-                    >
+                    <svg class="catalog-item__cart-icon" width="20" height="19">
                       <use xlink:href="#icon-cart"></use>
                     </svg>
                   </button>
                 </p>
               </div>
             </li>
-            <li class="catalog-item">
+            <li class="catalog__item catalog-item">
               <a href="" class="catalog-item__image">
                 <picture>
                   <source
@@ -229,18 +225,14 @@
                     aria-label="Купить"
                     class="catalog-item__button button--buy"
                   >
-                    <svg
-                      class="catalog-item__button__cart-icon"
-                      width="20"
-                      height="19"
-                    >
+                    <svg class="catalog-item__cart-icon" width="20" height="19">
                       <use xlink:href="#icon-cart"></use>
                     </svg>
                   </button>
                 </p>
               </div>
             </li>
-            <li class="catalog-item">
+            <li class="catalog__item catalog-item">
               <a href="#" class="catalog-item__image">
                 <picture>
                   <source
@@ -307,11 +299,7 @@
                     aria-label="Купить"
                     class="catalog-item__button button--buy"
                   >
-                    <svg
-                      class="catalog-item__button__cart-icon"
-                      width="20"
-                      height="19"
-                    >
+                    <svg class="catalog-item__cart-icon" width="20" height="19">
                       <use xlink:href="#icon-cart"></use>
                     </svg>
                   </button>
@@ -321,13 +309,13 @@
           </ul>
         </div>
       </section>
-      <section class="page-main__production-video production-video">
+      <article class="page-main__production-video production-video">
         <div class="production-video__wrapper">
           <div class="production-video__content">
             <h2 class="production-video__title title title--h2">
               Процесс производства
             </h2>
-            <p class="production-video__discription">
+            <p class="production-video__description">
               По просьбам наших любимых фолловеров мы сняли для вас подробное
               видео о том, как появляются наши товары.
             </p>
@@ -335,56 +323,45 @@
               Сделать заказ
             </button>
           </div>
-          <a class="production-video__link" href="#">
-            <picture>
-              <source
-                type="image/webp"
-                media="(min-width: 1150px)"
-                srcset="
-                  img/video-desktop@1x.webp 1x,
-                  img/video-desktop@2x.webp 2x
-                "
-              />
-              <source
-                type="image/webp"
-                media="(min-width: 768px)"
-                srcset="
-                  img/video-tablet@1x.webp 1x,
-                  img/video-tablet@2x.webp 2x
-                "
-              />
-              <source
-                type="image/webp"
-                srcset="
-                  img/video-mobile@1x.webp 1x,
-                  img/video-mobile@2x.webp 2x
-                "
-              />
-              <source
-                media="(min-width: 1150px)"
-                srcset="
-                  img/video-desktop@1x.jpg 1x,
-                  img/video-desktop@2x.jpg 2x
-                "
-              />
-              <source
-                media="(min-width: 768px)"
-                srcset="img/video-tablet@1x.jpg 1x, img/video-tablet@2x.jpg 2x"
-              />
-              <img
-                src="img/video-mobile@1x.jpg"
-                srcset="img/photo-hare-mobile@2x.jpg"
-                width="240"
-                height="150"
-                alt="Вязанная корзинка, цвета: серый с тиффани"
-              />
-            </picture>
-            <svg class="production-video__play" width="101" height="77">
-              <use xlink:href="#icon-play"></use>
-            </svg>
-          </a>
+          <picture class="production-video__img-wrapper">
+            <source
+              type="image/webp"
+              media="(min-width: 1150px)"
+              srcset="
+                img/video-desktop@1x.webp 1x,
+                img/video-desktop@2x.webp 2x
+              "
+            />
+            <source
+              type="image/webp"
+              media="(min-width: 768px)"
+              srcset="img/video-tablet@1x.webp 1x, img/video-tablet@2x.webp 2x"
+            />
+            <source
+              type="image/webp"
+              srcset="img/video-mobile@1x.webp 1x, img/video-mobile@2x.webp 2x"
+            />
+            <source
+              media="(min-width: 1150px)"
+              srcset="img/video-desktop@1x.jpg 1x, img/video-desktop@2x.jpg 2x"
+            />
+            <source
+              media="(min-width: 768px)"
+              srcset="img/video-tablet@1x.jpg 1x, img/video-tablet@2x.jpg 2x"
+            />
+            <img
+              src="img/video-mobile@1x.jpg"
+              srcset="img/photo-hare-mobile@2x.jpg"
+              width="240"
+              height="150"
+              alt="Вязанная корзинка, цвета: серый с тиффани"
+            />
+          </picture>
+          <svg class="production-video__play" width="101" height="77">
+            <use xlink:href="#icon-play"></use>
+          </svg>
         </div>
-      </section>
+      </article>
     </main>
     <footer class="page-footer">
       <div class="page-footer__wrapper">
