@@ -15,12 +15,14 @@
   width: 86px;
   height: 35px;
 
-  &:hover {
-    opacity: 60%;
-  }
+  &[href] {
+    &:hover {
+      opacity: 60%;
+    }
 
-  &:active {
-    opacity: 30%;
+    &:active {
+      opacity: 30%;
+    }
   }
 }
 
@@ -37,6 +39,7 @@
     position: absolute;
     top: 22px;
     left: 48px;
+    z-index: 3;
 
     width: 112px;
     height: 48px;
