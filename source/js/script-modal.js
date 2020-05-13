@@ -3,12 +3,13 @@ var modal = document.querySelector(".modal");
 var form = modal.querySelector(".form-add-cart");
 var close = form.querySelector(".form-add-cart__button");
 
-buyButtons.forEach(function (buyButton) {
+for (var i = 0; i < buyButtons.length; i += 1) {
+  var buyButton = buyButtons[i];
   buyButton.addEventListener("click", function (evt) {
     evt.preventDefault();
     modal.classList.add("modal--show");
   });
-});
+}
 
 document.addEventListener(
   "click",
