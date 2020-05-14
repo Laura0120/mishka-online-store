@@ -42,7 +42,7 @@
   &::after {
     content: "";
     position: absolute;
-    opacity: 0.25;
+    opacity: 0.5;
     top: 24px;
   }
 
@@ -80,7 +80,8 @@
     padding-top: 20px;
 
     &::after {
-      top: 24px;
+      top: 19px;
+      opacity: 0.7;
     }
   }
 
@@ -88,7 +89,7 @@
     color: rgba(255, 255, 255, 0.3);
 
     &::after {
-      opacity: 0.1;
+      opacity: 0.3;
     }
   }
 }
@@ -151,14 +152,26 @@
   }
 
   .promo__item {
-    min-height: 123px;
+    min-height: 124px;
     padding: 28px 38px 0 33px;
 
     font-size: 20px;
     line-height: 30px;
 
+    &::after {
+      top: 30px;
+    }
+
+    &--toys::after {
+      right: 33px;
+    }
+
     &:hover {
       padding-top: 23px;
+
+      &::after {
+        top: 25px;
+      }
     }
   }
 }
